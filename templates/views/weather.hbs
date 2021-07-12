@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>csslink}}
+    <title>WeatherForecast | Weather</title>
+</head>
+<style>
+    .card{
+        position:absolute;
+        top:35%;
+        left:40%;
+        transform: translate(-30%,-30%);
+        width:60rem;
+        height:20rem;
+        border-radius: 7px;
+        color: white;
+        background-color: rgb(19, 17, 17);;
+    }
+    .card-header{
+        display: inline-flex;
+         font-size: 2rem;
+       
+    }
+    #searchbar{
+        text-align: center;
+        width:40rem;
+         border-radius: 2rem;
+         margin: 0 1rem;
+         outline: none;
+    }
+    #search{
+        text-align: center;
+        border-radius: 1px;
+        font-size: 1.5rem;
+        width:14rem;
+        height: 3.3rem;
+         border-radius: 2rem;
+         background-color: rgb(51, 48, 224);
+        
+    }
+    #search:hover{
+        color:white;
+        background-color: black;
+        border-color: white;
+    }
+    .card-text{
+        display: inline;
+        font-size: 4rem;
+    }
+    @media (max-width: 768px){
+    .card{
+        width: auto;
+        height: auto;
+        margin:5rem 0;
+    }
+    #search{
+        width: auto;
+        {{!-- height: auto; --}}
+    }
+    #searchbar{
+        width: auto;
+        height: auto;
+    }
+    .navbar{
+        width: auto;
+    }
+    
+}
+    
+</style>
+{{>footercss}}
+<body>
+    {{>navbar}}
+    <div class="card">
+  <div class="card-header">
+    <form class="temp_form">
+        <input type="search" id="searchbar" placeholder="Enter your city name">
+        <input type="submit" value="search" id="search">
+    </form>
+    
+  </div>
+  <div class="card-body">
+    <h2 id="card-title"></h2>
+    <h1 id="card-text1" class="card-text"></h1>
+    <h1 id="card-text2" class="card-text"></h1>
+  </div>
+</div>
+    {{>footer}}
+    <script src="js/main.js"></script>
+</body>
+</html>
