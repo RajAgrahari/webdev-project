@@ -9,6 +9,8 @@ const getinfo = async (event) => {
     const city = searchbar.value;
     if (city == "") {
         cardtitle.innerText = `Please write the name before searching`;
+        cardtext1.innerHTML = "";
+        cardtext2.innerHTML = "";
     }
     else {
         try {
