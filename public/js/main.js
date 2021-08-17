@@ -14,7 +14,7 @@ const getinfo = async (event) => {
     }
     else {
         try {
-            let url = `http://api.openweathermap.org/data/2.5/weather?q=Allahabad&units=metric&appid=638293041a22f99b2a4b996bf4caf491`;
+            let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=638293041a22f99b2a4b996bf4caf491`;
             const response = await fetch(url);
             const data = await response.json();
             const arrdata = [data];
